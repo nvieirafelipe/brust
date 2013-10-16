@@ -1,13 +1,15 @@
-<head>
-  <title>brust</title>
-</head>
-
 <body>
-  {{> hello}}
+  {{> organization}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="organization">
+  <h1>{{organizationTitle}}</h1>
+  <label for="organization">{{organizationLabel}}</label>
+  <input type="text" id="organization" value="pinuts-studios"/>
+  <input type="button" id="fetchButton" value="Fetch" />
+  <select name="organization">
+    {{#each repositories}}
+      <option>{{name}} - {{description}}</option>
+    {{/each}}
+  </select>
 </template>
