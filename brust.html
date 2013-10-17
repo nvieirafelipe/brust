@@ -15,7 +15,9 @@
   <h2>Milestones</h2>
   {{#each milestones}}
     <h3>{{number}} - {{title}}</h3>
-    {{work_left_vs_time}}
-  {{/each}}
 
+    {{#constant}}
+    <svg id="workLeftVSTime-{{number}}" />
+    {{/constant}}
+  {{/each}}
 </template>
