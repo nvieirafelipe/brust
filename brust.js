@@ -3,7 +3,7 @@ if (Meteor.isClient) {
     return "What's your organization ?";
   };
   Template.organization.organizationLabel = function () {
-    return "Organização: ";
+    return "Organization: ";
   };
 
   Template.organization.repositories = function() {
