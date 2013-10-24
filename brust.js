@@ -22,7 +22,7 @@ if (Meteor.isClient) {
 
     function burnDownChart(milestone) {
 
-      var milestoneDueIn = milestone.work_left_vs_time.length-1,
+      var milestoneDueIn = Math.round((new Date(milestone.due_on) - new Date(milestone.created_at))/1000/60/60/24);
           maxWorkLeft = d3.max(milestone.work_left_vs_time),
           data = milestone.work_left_vs_time;
 
